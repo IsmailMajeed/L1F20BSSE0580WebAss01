@@ -1,0 +1,276 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+form .goBtn button {
+  background-color: red;
+  border: 0px;
+  display: flex;
+  color: white;
+  border-radius: 0 5px 5px 0px;
+  cursor: pointer;
+}
+
+form .goBtn {
+  outline: 1px solid gray;
+  outline-offset: 1px;
+  margin-left: 5px;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.select {
+  position: relative;
+}
+
+.select button {
+  position: absolute;
+  right: 7px;
+  top: 1px;
+  height: 20px;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-line {
+  display: flex;
+  /* gap: 5px; */
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.gap {
+  gap: 5px;
+}
+
+.rotate {
+  rotate: 270deg;
+}
+
+.text-sm {
+  font-size: 14px;
+}
+
+.navbar {
+  background: linear-gradient(to bottom, rgba(255, 0, 0, 0.5) 50%, rgba(255, 0, 0, 1) 50%);
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 7px;
+  box-shadow: 3px 3px 5px gray;
+  margin: 10px 0px;
+}
+
+.navbar div {
+  padding: 10px 20px;
+  border-right: 1px solid yellow;
+  cursor: pointer;
+}
+
+.navbar span {
+  white-space: nowrap;
+}
+
+.close-btn {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  font-size: 18px;
+  top: 10px;
+}
+
+@media (max-width: 660px) {
+  .navbar {
+    background-color: red;
+    flex-direction: column;
+    position: absolute;
+    left: -100%;
+    width: 50%;
+    transition: 0.5s all ease;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .show {
+    left: 0;
+  }
+
+  .navbar div {
+    padding: 10px 20px;
+    border-right: 0px;
+  }
+
+  .close-btn {
+    display: block;
+  }
+}
+
+.container {
+  border: 1px solid lightgray;
+  border-bottom: 0;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.container .flex-line span:nth-child(1),
+.container .flex-line span:nth-child(2) {
+  color: red;
+}
+
+.container .flex-line span:nth-child(1) {
+  outline: 1px solid lightgray;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline-offset: 2px;
+}
+
+.container .flex-right {
+  display: flex;
+  justify-content: right;
+  padding: 10px 20px;
+}
+
+.container .total {
+  margin-left: 20px;
+}
+
+.container .total span:nth-child(1) {
+  color: red;
+}
+
+.container .total span:nth-child(2) {
+  font-weight: 600;
+}
+
+.container .cover img:first-child {
+  max-width: 50%;
+  border: 1px solid lightgray;
+  border-radius: 0px 0px 5px 5px;
+  border-left: 0;
+  padding: 2px;
+  object-fit: cover;
+}
+
+.container .cover {
+  display: flex;
+  gap: 15px;
+}
+
+@media (max-width:660px) {
+  .container .cover img:first-child {
+    max-width: 100%;
+  }
+
+  .container .cover {
+    flex-direction: column;
+  }
+}
+
+.container .cover .itemsContainer {
+  border: 1px solid lightgray;
+  border-right: 0;
+  border-radius: 0px 0px 5px 5px;
+  width: 100%;
+}
+
+.container .cover .itemContainer {
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  padding: 2px 0px 2px 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container .cover .itemContainer img {
+  max-width: 160px;
+}
+
+.container .cover .itemContainer h3 {
+  display: inline;
+  padding-left: 10px;
+  color: red;
+}
+
+.container .cover .itemContainer div:nth-child(2) {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 2px;
+}
+
+.footer .heading {
+  background: linear-gradient(to bottom, rgba(255, 0, 0, 0.5) 50%, rgba(255, 0, 0, 1) 50%);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 3px 3px 5px gray;
+}
+
+.footer .offersContainer {
+  border: 1px solid lightgray;
+  margin-top: 5px;
+  border-radius: 5px;
+  display: flex;
+}
+
+.footer .offerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-right: 1px solid lightgray;
+}
+
+@media (max-width: 860px) {
+  .footer .offersContainer {
+    flex-direction: column;
+  }
+
+  .footer .offerContainer {
+    border-right: 0;
+    border-bottom: 1px solid lightgray;
+  }
+}
+
+.footer .offerContainer div {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+.footer .offerContainer img {
+  mix-blend-mode: color-burn;
+  max-width: 180px;
+}
+
+.footer .offerContainer span:first-child {
+  font-size: 20px;
+  font-weight: 600;
+  color: red;
+}
